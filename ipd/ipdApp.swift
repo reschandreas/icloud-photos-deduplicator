@@ -1,5 +1,5 @@
 //
-//  ipdApp.swift
+//  IPDApp.swift
 //  ipd
 //
 //  Created by Andreas Resch on 19.01.26.
@@ -7,26 +7,16 @@
 
 import SwiftUI
 import SwiftData
+import Photos
 
 @main
-struct ipdApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+struct IPDApp: App {
+    
+    var cachingImageManager = PHCachingImageManager()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(cachingImageManager: cachingImageManager)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

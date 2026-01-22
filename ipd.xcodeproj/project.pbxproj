@@ -6,43 +6,33 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		E1D7B21A2F1ECE7900D1FC63 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1D7B2022F1ECE7800D1FC63 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1D7B2092F1ECE7800D1FC63;
-			remoteInfo = ipd;
-		};
-		E1D7B2242F1ECE7900D1FC63 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1D7B2022F1ECE7800D1FC63 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1D7B2092F1ECE7800D1FC63;
-			remoteInfo = ipd;
-		};
-/* End PBXContainerItemProxy section */
+/* Begin PBXBuildFile section */
+		E11EB4882F1F96D300D1FC63 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = E11EB4872F1F96D300D1FC63 /* OrderedCollections */; };
+		E169E7562F2294C800D1FC63 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E169E7552F2294C800D1FC63 /* SwiftUI.framework */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E169E7552F2294C800D1FC63 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		E1D7B20A2F1ECE7800D1FC63 /* ipd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipd.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1D7B2192F1ECE7900D1FC63 /* ipdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1D7B2232F1ECE7900D1FC63 /* ipdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E1D7B2372F1ED39600D1FC63 /* Exceptions for "ipd" folder in "ipd" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E1D7B2092F1ECE7800D1FC63 /* ipd */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E1D7B20C2F1ECE7800D1FC63 /* ipd */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E1D7B2372F1ED39600D1FC63 /* Exceptions for "ipd" folder in "ipd" target */,
+			);
 			path = ipd;
-			sourceTree = "<group>";
-		};
-		E1D7B21C2F1ECE7900D1FC63 /* ipdTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ipdTests;
-			sourceTree = "<group>";
-		};
-		E1D7B2262F1ECE7900D1FC63 /* ipdUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ipdUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -52,32 +42,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1D7B2162F1ECE7900D1FC63 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1D7B2202F1ECE7900D1FC63 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E169E7562F2294C800D1FC63 /* SwiftUI.framework in Frameworks */,
+				E11EB4882F1F96D300D1FC63 /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E169E7542F2294C700D1FC63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E169E7552F2294C800D1FC63 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1D7B2012F1ECE7800D1FC63 = {
 			isa = PBXGroup;
 			children = (
 				E1D7B20C2F1ECE7800D1FC63 /* ipd */,
-				E1D7B21C2F1ECE7900D1FC63 /* ipdTests */,
-				E1D7B2262F1ECE7900D1FC63 /* ipdUITests */,
+				E169E7542F2294C700D1FC63 /* Frameworks */,
 				E1D7B20B2F1ECE7800D1FC63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				E1D7B20A2F1ECE7800D1FC63 /* ipd.app */,
-				E1D7B2192F1ECE7900D1FC63 /* ipdTests.xctest */,
-				E1D7B2232F1ECE7900D1FC63 /* ipdUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,56 +95,11 @@
 			);
 			name = ipd;
 			packageProductDependencies = (
+				E11EB4872F1F96D300D1FC63 /* OrderedCollections */,
 			);
 			productName = ipd;
 			productReference = E1D7B20A2F1ECE7800D1FC63 /* ipd.app */;
 			productType = "com.apple.product-type.application";
-		};
-		E1D7B2182F1ECE7900D1FC63 /* ipdTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E1D7B2302F1ECE7900D1FC63 /* Build configuration list for PBXNativeTarget "ipdTests" */;
-			buildPhases = (
-				E1D7B2152F1ECE7900D1FC63 /* Sources */,
-				E1D7B2162F1ECE7900D1FC63 /* Frameworks */,
-				E1D7B2172F1ECE7900D1FC63 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E1D7B21B2F1ECE7900D1FC63 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				E1D7B21C2F1ECE7900D1FC63 /* ipdTests */,
-			);
-			name = ipdTests;
-			packageProductDependencies = (
-			);
-			productName = ipdTests;
-			productReference = E1D7B2192F1ECE7900D1FC63 /* ipdTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		E1D7B2222F1ECE7900D1FC63 /* ipdUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E1D7B2332F1ECE7900D1FC63 /* Build configuration list for PBXNativeTarget "ipdUITests" */;
-			buildPhases = (
-				E1D7B21F2F1ECE7900D1FC63 /* Sources */,
-				E1D7B2202F1ECE7900D1FC63 /* Frameworks */,
-				E1D7B2212F1ECE7900D1FC63 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E1D7B2252F1ECE7900D1FC63 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				E1D7B2262F1ECE7900D1FC63 /* ipdUITests */,
-			);
-			name = ipdUITests;
-			packageProductDependencies = (
-			);
-			productName = ipdUITests;
-			productReference = E1D7B2232F1ECE7900D1FC63 /* ipdUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -176,14 +114,6 @@
 					E1D7B2092F1ECE7800D1FC63 = {
 						CreatedOnToolsVersion = 26.2;
 					};
-					E1D7B2182F1ECE7900D1FC63 = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = E1D7B2092F1ECE7800D1FC63;
-					};
-					E1D7B2222F1ECE7900D1FC63 = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = E1D7B2092F1ECE7800D1FC63;
-					};
 				};
 			};
 			buildConfigurationList = E1D7B2052F1ECE7800D1FC63 /* Build configuration list for PBXProject "ipd" */;
@@ -195,34 +125,21 @@
 			);
 			mainGroup = E1D7B2012F1ECE7800D1FC63;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E11EB4862F1F96D300D1FC63 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E1D7B20B2F1ECE7800D1FC63 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E1D7B2092F1ECE7800D1FC63 /* ipd */,
-				E1D7B2182F1ECE7900D1FC63 /* ipdTests */,
-				E1D7B2222F1ECE7900D1FC63 /* ipdUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E1D7B2082F1ECE7800D1FC63 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1D7B2172F1ECE7900D1FC63 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1D7B2212F1ECE7900D1FC63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,34 +156,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D7B2152F1ECE7900D1FC63 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1D7B21F2F1ECE7900D1FC63 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E1D7B21B2F1ECE7900D1FC63 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E1D7B2092F1ECE7800D1FC63 /* ipd */;
-			targetProxy = E1D7B21A2F1ECE7900D1FC63 /* PBXContainerItemProxy */;
-		};
-		E1D7B2252F1ECE7900D1FC63 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E1D7B2092F1ECE7800D1FC63 /* ipd */;
-			targetProxy = E1D7B2242F1ECE7900D1FC63 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E1D7B22B2F1ECE7900D1FC63 /* Debug */ = {
@@ -322,6 +212,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "requires access to your photos to find and label duplicates";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "requires access to your photos to find and label duplicates";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -380,6 +272,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "requires access to your photos to find and label duplicates";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "requires access to your photos to find and label duplicates";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -394,24 +288,48 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9YJ37H3RWT;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = YES;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ipd/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "iCloud Photo Deduplicator";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "requires access to deduplicate photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "requires access to your photos to find and label duplicates";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.resch.ipd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -426,110 +344,54 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9YJ37H3RWT;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = YES;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ipd/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "iCloud Photo Deduplicator";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "requires access to deduplicate photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "requires access to your photos to find and label duplicates";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.resch.ipd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		E1D7B2312F1ECE7900D1FC63 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YJ37H3RWT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.resch.ipdTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ipd.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ipd";
-			};
-			name = Debug;
-		};
-		E1D7B2322F1ECE7900D1FC63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YJ37H3RWT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.resch.ipdTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ipd.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ipd";
-			};
-			name = Release;
-		};
-		E1D7B2342F1ECE7900D1FC63 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YJ37H3RWT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.resch.ipdUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = ipd;
-			};
-			name = Debug;
-		};
-		E1D7B2352F1ECE7900D1FC63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9YJ37H3RWT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.resch.ipdUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = ipd;
 			};
 			name = Release;
 		};
@@ -543,7 +405,7 @@
 				E1D7B22C2F1ECE7900D1FC63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E1D7B22D2F1ECE7900D1FC63 /* Build configuration list for PBXNativeTarget "ipd" */ = {
 			isa = XCConfigurationList;
@@ -552,27 +414,28 @@
 				E1D7B22F2F1ECE7900D1FC63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E1D7B2302F1ECE7900D1FC63 /* Build configuration list for PBXNativeTarget "ipdTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1D7B2312F1ECE7900D1FC63 /* Debug */,
-				E1D7B2322F1ECE7900D1FC63 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E1D7B2332F1ECE7900D1FC63 /* Build configuration list for PBXNativeTarget "ipdUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1D7B2342F1ECE7900D1FC63 /* Debug */,
-				E1D7B2352F1ECE7900D1FC63 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E11EB4862F1F96D300D1FC63 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E11EB4872F1F96D300D1FC63 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E11EB4862F1F96D300D1FC63 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1D7B2022F1ECE7800D1FC63 /* Project object */;
 }
