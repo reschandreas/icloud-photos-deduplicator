@@ -11,9 +11,8 @@ import Photos
 
 @Observable
 class MainViewModel {
-    var cachingImageManager: PHCachingImageManager
     
-    var deduplicator: Optional<Deduplicator>
+    var deduplicator: Optional<Deduplicator> = nil
     
     var reloadImage: Bool = false
     
@@ -23,27 +22,35 @@ class MainViewModel {
         self.assets.count
     }
     
+    var liveCounter: Int = 0
+    var totals: Int = 0
+    
     func fetchAssets() {
-        self.assets = []
-        let options = PHFetchOptions()
-//        options.fetchLimit = 1000
-        let result = PHAsset.fetchAssets(with: options)
-        var list: [IPDImage] = []
-        list.reserveCapacity(result.count)
-        result.enumerateObjects { asset, _, _ in
-            if let image = IPDImage(asset: asset) {
-                list.append(image)
+        Task { @MainActor in
+            var list: [IPDImage] = []
+            let options = PHFetchOptions()
+//            options.fetchLimit = 2000
+            let result = PHAsset.fetchAssets(with: options)
+            list.reserveCapacity(result.count)
+            self.totals = result.count
+            
+            for index in 0..<result.count {
+                if let image = IPDImage(asset: result.object(at: index)) {
+                    list.append(image)
+                    await MainActor.run {
+                        withAnimation {
+                            liveCounter = list.count
+                        }
+                    }
+                }
             }
+            
+            assets = list
         }
-        self.assets = list
-        self.deduplicator = Optional(Deduplicator(assets: self.assets))
     }
     
-    init(cachingImageManager: PHCachingImageManager) {
-        self.cachingImageManager = cachingImageManager
-        self.deduplicator = nil
-        DispatchQueue.main.async {
-            self.fetchAssets()
-        }
+    func detectDuplicates() {
+        self.deduplicator = Optional(Deduplicator(assets: self.assets))
     }
 }
+

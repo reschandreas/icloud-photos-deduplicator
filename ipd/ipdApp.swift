@@ -12,11 +12,9 @@ import Photos
 @main
 struct IPDApp: App {
     
-    var cachingImageManager = PHCachingImageManager()
-
     var body: some Scene {
         WindowGroup {
-            MainView(cachingImageManager: cachingImageManager)
+            MainView()
         }
     }
 }

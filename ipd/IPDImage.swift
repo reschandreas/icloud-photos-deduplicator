@@ -65,8 +65,6 @@ struct IPDImage: Identifiable, Hashable {
         self.creationDate = asset.creationDate ?? Date()
         self.modificationDate = asset.modificationDate ?? self.creationDate
         
-        // not sure how good this is
-//        var edit: Int = baseResource.hashValue
         var edit: Int = Int.max
         resources.forEach { item in
             edit = edit ^ item.hashValue
@@ -83,19 +81,11 @@ struct IPDImage: Identifiable, Hashable {
         }
     }
     
-    static func createFromString(string: String) {
+    static func converByteToHumanReadable(_ bytes:Int64) -> String {
+        let formatter:ByteCountFormatter = ByteCountFormatter()
+        formatter.countStyle = .binary
         
-    }
-    
-    func converByteToHumanReadable(_ bytes:Int64) -> String {
-         let formatter:ByteCountFormatter = ByteCountFormatter()
-         formatter.countStyle = .binary
-         
-         return formatter.string(fromByteCount: Int64(bytes))
-     }
-    
-    func loadImage() {
-        
+        return formatter.string(fromByteCount: Int64(bytes))
     }
 }
 

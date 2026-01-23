@@ -17,7 +17,7 @@ class Deduplicator {
     init(assets: [IPDImage]) {
         var tmpMap: Dictionary<String, Set<IPDImage>> = [:]
         assets.forEach { asset in
-            let identifier = (asset.imagename ?? "unmapped") + asset.creationDate.ISO8601Format()
+            let identifier = (asset.imagename ?? "unmapped") + asset.creationDate.ISO8601Format() + (asset.asset?.mediaType.hashValue.description ?? "image")
                               // + asset.creationDate.ISO8601Format() + asset.modificationDate.ISO8601Format())
             var value = tmpMap[identifier]
             if value == nil {
@@ -37,5 +37,11 @@ class Deduplicator {
     
     func countDuplicates() -> Int {
         self.duplicates.count
+    }
+    
+    func removeEntry(key: String) {
+        self.map = self.map.filter { k, v in
+            k != key
+        }
     }
 }
