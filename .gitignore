@@ -1,0 +1,4 @@
+**/*.xcodeproj
+**/*.pbxproj
+**/*.xcscheme
+.DS_Store

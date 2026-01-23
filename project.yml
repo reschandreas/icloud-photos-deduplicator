@@ -1,0 +1,31 @@
+name: ipd
+options:
+  bundleIdPrefix: io.resch.ipd
+packages:
+  swift-collections:
+    url: https://github.com/apple/swift-collections.git
+    from: 1.3.0
+targets:
+  ipd:
+    type: application
+    platform: macOS
+    deploymentTarget: "26.0"
+    sources: [ipd]
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        CFBundleDisplayName: iCloud Photos Deduplicator
+        DEVELOPMENT_TEAM: 9YJ37H3RWT
+        PRODUCT_BUNDLE_IDENTIFIER: "io.resch.ipd"
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "requires access to your photos to find and delete duplicates"
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: "requires access to your photos to find and delete duplicates"
+        ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY: "YES"
+        PRODUCT_NAME: iCloud Photos Deduplicator
+        INFOPLIST_KEY_CFBundleDisplayName: "iCloud Photos Deduplicator"
+        INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.utilities"
+        CURRENT_PROJECT_VERSION: 1
+    dependencies:
+      - framework: SwiftUI.framework
+        embed: false
+      - package: swift-collections
+        product: OrderedCollections
