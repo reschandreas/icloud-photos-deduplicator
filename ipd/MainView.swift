@@ -54,7 +54,7 @@ struct MainView: View {
                     ToolbarItem {
                         Button(action: (syncLibrary)) {
                             Label("Sync Photo Library", systemImage: "arrow.trianglehead.2.clockwise.rotate.90")
-                        }
+                        }.buttonStyle(GlassButtonStyle())
                     }
                 }
             } detail: {

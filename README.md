@@ -1,6 +1,8 @@
+<img src="./images/icon-dark.svg" alt="icon" width="128" height="128">
+
 # `ipd` — iCloud Photos Deduplicator
 
-![how it looks like](./ipd.png)
+![how it looks like](./images/ipd.png)
 
 `ipd` is a small macOS utility application that tries to detect images with the same name, same creation date and type. It's meant to help out the iCloud Photos Duplicate finder, as it sometimes misses obvious clones, `ipd` only looks for obvious ones.
 

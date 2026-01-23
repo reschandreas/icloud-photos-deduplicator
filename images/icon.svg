@@ -1,0 +1,30 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Soft blue-teal gradient background -->
+    <linearGradient id="bgGradientLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A8D0DD"/>
+      <stop offset="100%" stop-color="#5FA8C7"/>
+    </linearGradient>
+
+    <!-- Subtle glass highlight -->
+    <linearGradient id="glassHighlightLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Liquid Glass container -->
+  <rect x="64" y="64" width="896" height="896" rx="200" ry="200" fill="url(#bgGradientLight)" />
+  <rect x="64" y="64" width="896" height="896" rx="200" ry="200" fill="url(#glassHighlightLight)" />
+
+  <!-- Photo stack -->
+  <g stroke="white" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Back duplicate photo 1 -->
+    <rect x="300" y="360" width="384" height="256" rx="32" ry="32" opacity="0.25" transform="rotate(-12 492 488)"/>
+    <!-- Back duplicate photo 2 -->
+    <rect x="320" y="380" width="384" height="256" rx="32" ry="32" opacity="0.35" transform="rotate(-6 512 508)"/>
+    <!-- Front kept photo -->
+    <rect x="344" y="400" width="384" height="256" rx="32" ry="32"/>
+  </g>
+</svg>
+

@@ -56,10 +56,3 @@ struct SmallIPDImageListView: View {
         }
     }
 }
-
-struct SmallIPDImageListView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        SmallIPDImageListView(size: 64, image: IPDImage(name: "lenna.heic", image: Image("lenna")))
-    }
-}

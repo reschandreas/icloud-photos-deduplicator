@@ -116,10 +116,3 @@ struct IPDImageListView: View {
         }
     }
 }
-
-struct IPDImageListView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        IPDImageListView(size: 256, showDetails: true, image: IPDImage(name: "lenna.heic", image: Image("lenna")), onDelete: {})
-    }
-}
