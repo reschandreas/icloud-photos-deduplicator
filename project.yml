@@ -4,7 +4,7 @@ options:
 packages:
   swift-collections:
     url: https://github.com/apple/swift-collections.git
-    from: 1.6.0
+    from: 1.7.2
 targets:
   ipd:
     type: application
